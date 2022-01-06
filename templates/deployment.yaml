@@ -82,9 +82,11 @@ spec:
             - mountPath: /conf
               name: config
               readOnly: true
+            {{- if .Values.mount.localtime }}
             - mountPath: /etc/localtime
               name: host-timezone
               readOnly: true
+            {{- end}}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -98,7 +100,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       volumes:
-        {{- if .Values.mount.localtime}}
+        {{- if .Values.mount.localtime }}
         - hostPath:
             path: /etc/localtime
             type: ""
