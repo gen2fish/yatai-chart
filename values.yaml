@@ -47,7 +47,7 @@ externalPostgresql:
   database: yatai
 
 mount:
-  localtime: false
+  localtime: /etc/localtime
 
 config:
   # you can put your config.yaml here

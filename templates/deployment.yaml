@@ -86,7 +86,7 @@ spec:
             - mountPath: /etc/localtime
               name: host-timezone
               readOnly: true
-            {{- end}}
+            {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
