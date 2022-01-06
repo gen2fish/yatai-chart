@@ -46,6 +46,9 @@ externalPostgresql:
   password: ''
   database: yatai
 
+mount:
+  localtime: false
+
 config:
   # you can put your config.yaml here
 

@@ -98,10 +98,12 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       volumes:
+        {{- if .Values.mount.localtime}}
         - hostPath:
             path: /etc/localtime
             type: ""
           name: host-timezone
+        {{- end }}
         - name: config
           secret:
             secretName: {{ include "yatai.fullname" . }}
