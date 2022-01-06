@@ -64,7 +64,7 @@ entries:
     version: 10.13.11
   yatai:
   - apiVersion: v2
-    appVersion: 0.1.0
+    appVersion: 0.1.1
     created: "2022-01-05T19:45:22.093382667-07:00"
     dependencies:
     - condition: postgresql.enabled
